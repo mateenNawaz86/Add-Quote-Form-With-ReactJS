@@ -21,18 +21,14 @@ const QuoteInput = (props) => {
       return;
     }
     props.onAddQuote(enteredValue);
-    setEnteredValue("");
+    setEnteredValue('');
   };
 
   return (
     <form onSubmit={formSubmitHandler}>
       <div className={`form-control ${!isValid ? "invalid" : ""}`}>
         <label>Enter New Quotes</label>
-        <input
-          type="text"
-          value={enteredValue}
-          onChange={goalInputChangeHandler}
-        />
+        <input type="text" value={enteredValue} onChange={goalInputChangeHandler} />
       </div>
       <Button type="submit">Add Quote</Button>
       <p id="caption">Mirani ❤️</p>
